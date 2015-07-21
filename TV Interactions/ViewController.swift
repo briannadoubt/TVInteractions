@@ -147,15 +147,18 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
         if UIScreen.screens().count > 1 {
             //Found a screen!
             
+            //Here's the screen...
             let secondScreen = UIScreen.screens()[1]
             let screenBounds = secondScreen.bounds
             
+            //And here's the window for that screen...
             secondWindow = UIWindow(frame: screenBounds)
             secondWindow?.screen = secondScreen
             
-            //Set up content on second window
+            //Set up and configure the ViewController on the second window...
             vc = SecondViewController()
             vc!.view = NSBundle.mainBundle().loadNibNamed("SecondViewController", owner: vc, options: nil)[0] as! UIView
+            
             vc?.webView.delegate = self
             
             secondWindow?.rootViewController = vc
