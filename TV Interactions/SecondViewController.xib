@@ -1,19 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController" customModule="TV_Interactions" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="DR5-Vj-cYU" id="7NL-zh-F43"/>
+                <outlet property="navBar" destination="9hF-GD-yEo" id="8wN-CQ-RsW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="FkC-5k-OMZ" id="Nzh-By-3S5"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FkC-5k-OMZ">
+                    <rect key="frame" x="0.0" y="44" width="600" height="555.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hF-GD-yEo">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="Cb1-eK-rjB"/>
+                    </items>
+                </navigationBar>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DR5-Vj-cYU">
+                    <rect key="frame" x="572" y="12" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FkC-5k-OMZ" secondAttribute="bottom" id="37w-b6-fJE"/>
+                <constraint firstItem="FkC-5k-OMZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5on-sV-c0F"/>
+                <constraint firstItem="DR5-Vj-cYU" firstAttribute="centerY" secondItem="9hF-GD-yEo" secondAttribute="centerY" id="747-ry-dyA"/>
+                <constraint firstItem="9hF-GD-yEo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="79v-f8-5aD"/>
+                <constraint firstAttribute="trailing" secondItem="DR5-Vj-cYU" secondAttribute="trailing" constant="8" id="JXB-8C-8n7"/>
+                <constraint firstItem="FkC-5k-OMZ" firstAttribute="top" secondItem="9hF-GD-yEo" secondAttribute="bottom" id="M7V-ys-U26"/>
+                <constraint firstItem="9hF-GD-yEo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fiU-YF-6m8"/>
+                <constraint firstItem="FkC-5k-OMZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pLi-rS-zyd"/>
+                <constraint firstAttribute="trailing" secondItem="FkC-5k-OMZ" secondAttribute="trailing" id="tna-6e-hMR"/>
+                <constraint firstAttribute="trailing" secondItem="9hF-GD-yEo" secondAttribute="trailing" id="wEg-GY-fOO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5on-sV-c0F"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="426" y="590"/>
         </view>
     </objects>
 </document>
